@@ -1,0 +1,120 @@
+
+<p><button mat-button (click)="sidenav1.toggle()">sidenav1.toggle()</button></p>
+<p><button mat-button (click)="openDialog()">sidenav2.toggle()</button></p>
+
+<mat-sidenav-container class="example-container" fxLayout="column" fxFlexFill>
+    <mat-sidenav #sidenav1 mode="side" [(opened)]="opened1" (opened)="events1.push('open!')"
+    (closed)="events1.push('close!')">
+
+      
+        <p>This is the primary content of the panel.</p>
+
+        <div style="display: block;">
+            <div class="geSidebar" style="touch-action: none; display: block;">
+                <a class="geItem" style="overflow: hidden; width: 34px; height: 32px; padding: 1px;">
+                    <ng-template #tee>
+                        <div  class="example-dialog-content" cdkDrag cdkDragRootElement=".cdk-overlay-pane">
+                    <svg style="left: 1px; top: 1px; width: 32px; height: 30px; display: block; position: relative; overflow: hidden;">
+                        <g>
+                            <g>
+
+                            </g>
+                            <g>
+                                <g transform="translate(0.5,0.5)" style="visibility: visible;">
+                                    <rect x="1.44" y="7.68" width="28.8" height="14.4" fill="#ffffff" stroke="#000000" stroke-width="1.3" pointer-events="all"></rect>
+                                </g>
+                            </g>
+                            <g>
+
+                            </g>
+                            <g></g>
+                        </g>
+                    </svg>
+                    </div>
+                </ng-template>
+                <div (click) ="openDialog()">
+                <svg style="left: 1px; top: 1px; width: 32px; height: 30px; display: block; position: relative; overflow: hidden;" >
+                    <g>
+                        <g>
+
+                        </g>
+                        <g>
+                            <g transform="translate(0.5,0.5)" style="visibility: visible;">
+                                <rect x="1.44" y="7.68" width="28.8" height="14.4" fill="#ffffff" stroke="#000000" stroke-width="1.3" pointer-events="all"></rect>
+                            </g>
+                        </g>
+                        <g>
+
+                        </g>
+                        <g></g>
+                    </g>
+                </svg>
+            </div>    
+                </a>
+            </div>
+        </div>
+      
+      
+
+               
+    </mat-sidenav>
+    <mat-sidenav #sidenav2 mode="push" [(opened)]="opened2" (opened)="events2.push('open!')"
+    (closed)="events2.push('close!')" position="end">End content</mat-sidenav>
+    <mat-sidenav-content >
+        
+        <mat-card style ="background: steelblue" fxFlex>
+            <div>
+                <svg class="canvas" [attr.id]="chartsvgid" fxFlex style = "height: 85vh;">
+                    <defs>
+                        <pattern id="innerGrid" :width="10" :height="10" patternUnits="userSpaceOnUse">
+                            <rect width="100%" height="100%" fill="none" stroke="#CCCCCC7A" stroke-width="0.5"/>
+                        </pattern>
+        
+                        <pattern id="grid" :width="100" :height="100" patternUnits="userSpaceOnUse">
+                            <rect width="100%" height="100%" fill="url(#innerGrid)" stroke="#CCCCCC7A"  stroke-width="1.5"/>
+                        </pattern>
+        
+                        <pattern id = "storageimg" :width="24" :height="24" patternUnits="userSpaceOnUse">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/>
+                        </pattern>
+                    </defs>
+                    <g id = "rough"></g>
+                    <g id = "sidemenuarea"></g>
+                </svg>                
+            </div>
+        </mat-card>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+<!--mat-card style ="background: steelblue">
+    <div>    
+        
+        <svg class="canvas" [attr.id]="chartsvgid" fxFlex>
+            <!-- To get the graph like pattern in the background START https://bl.ocks.org/agnjunio/fd86583e176ecd94d37f3d2de3a56814--> 
+ <!--           <defs>
+                <pattern id="innerGrid" :width="10" :height="10" patternUnits="userSpaceOnUse">
+                    <rect width="100%" height="100%" fill="none" stroke="#CCCCCC7A" stroke-width="0.5"/>
+                </pattern>
+
+                <pattern id="grid" :width="100" :height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100%" height="100%" fill="url(#innerGrid)" stroke="#CCCCCC7A"  stroke-width="1.5"/>
+                </pattern>
+
+                <pattern id = "storageimg" :width="24" :height="24" patternUnits="userSpaceOnUse">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/>
+                </pattern>
+            </defs>
+
+            <g id = "sidemenuarea"></g>
+
+            
+            <g id = "rough"></g>
+        </svg>
+    </div>
+
+<mat-card-->
