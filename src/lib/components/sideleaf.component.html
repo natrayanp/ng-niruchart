@@ -1,0 +1,84 @@
+  
+
+<button mat-button (click)="draw()"></button>
+<div #mysidemenus *ngFor = "let leafmould of leafmoulds; let i = index">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{leafmould.moduleId}}              
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content {{leafmould.moduleId}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+        <!--sideleaf *ngIf="genserv.mychartobj_serv !==undefined"></sideleaf-->
+        <div *ngFor = "let moduled of leafmould.moduledet; let j = index">            
+            {{'sleaf_' + moduled.dispname}}
+            <div cdkDrag cdkDragBoundary=".ovelayboundary" (cdkDragStarted)="dragStart($event)" (cdkDragMoved)="moved($event)" (cdkDragEnded)="dragEnd($event)" #dleaf_mytestside style = "border-color: blueviolet;"
+                id = "{{'div_sleaf_' + moduled.dispname}}" fxLayout="column wrap" >
+                <!--svg style="left: 1px; top: 1px; width: 132px; height: 130px; display: block; position: relative; overflow: hidden;" id ="mytestsidett"-->        
+                <svg  style="width: 170px; height: 30px;">
+                    <g id = "{{'sleaf_' + moduled.dispname}}"></g>
+                </svg>
+            </div>
+        </div>
+
+      
+    </mat-expansion-panel>
+    </div>      
+
+
+
+
+
+
+
+
+
+
+            <!--div style="display: block;" >
+            <div class="geSidebar" style="touch-action: none; display: block;">
+                <a class="geItem" style="overflow: hidden; width: 34px; height: 32px; padding: 1px;">
+                    <ng-template #tee>                        
+                    <svg style="left: 1px; top: 1px; width: 32px; height: 30px; display: block; position: relative; overflow: hidden;" cdkDrag cdkDragBoundary=".ovelayboundary">
+                        <g>
+                            <g>
+
+                            </g>
+                            <g>
+                                <g transform="translate(0.5,0.5)" style="visibility: visible;">
+                                    <rect  width="28.8" height="14.4" fill="#ffffff" stroke="#000000" stroke-width="1.3" pointer-events="all"></rect>
+                                </g>
+                            </g>
+                            <g>
+
+                            </g>
+                            <g></g>
+                        </g>
+                    </svg>
+                    
+                </ng-template-->
+                <!--div (mousedown) ="openDialog()" (window:mouseup) ="closeDialog()"-->
+                <!--div cdkDrag cdkDragBoundary=".ovelayboundary" (cdkDragStarted)="dragStart($event)" (cdkDragMoved)="moved($event)" (cdkDragEnded)="dragEnd($event)" #whysd style = "border-color: blueviolet;">
+                <svg style="left: 1px; top: 1px; width: 32px; height: 30px; display: block; position: relative; overflow: hidden;" >
+                    <g>
+                        <g>
+
+                        </g>
+                        <g>
+                            <g transform="translate(0.5,0.5)" style="visibility: visible;">
+                                <rect x="1.44" y="7.68" width="28.8" height="14.4" fill="#ffffff" stroke="#000000" stroke-width="1.3" pointer-events="all"></rect>
+                            </g>
+                        </g>
+                        <g>
+
+                        </g>
+                        <g></g>
+                    </g>
+                </svg>
+            </div>    
+                </a>
+            </div>
+        </div-->
+      
