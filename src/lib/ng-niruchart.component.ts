@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter,ViewChild, ViewContainerRef, OnDestroy, TemplateRef,ElementRef } from '@angular/core';
 //import { NiruChart } from 'niruchart';
 //import { NiruChart } from '/home/nirudhi/Natrayan/Projects/ETL/niruchart/lib/niruchart';
-import { NiruChart } from '/home/nirudhi/Natrayan/Projects/ETL/niruchart/src/niruchart';
+import { NiruChart } from '/home/natrayan/projects/ETL/niruchart/src/niruchart';
 import {Overlay, OverlayRef} from '@angular/cdk/overlay';
 import {TemplatePortal} from '@angular/cdk/portal';
 import { DynamicOverlay } from './services/overlay/dynamic-overlay.service';

@@ -12,7 +12,5 @@
     "nidhajs": "^1.0.31",
     "niruchart": "^1.0.9"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
